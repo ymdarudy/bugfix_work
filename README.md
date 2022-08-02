@@ -3,23 +3,22 @@
 This application contains some bugs for beginner of RoR. 
 
 # How to Setup（課題実施時にこの項目は必ず実施して下さい！）
-step1: fork this Repository
-- Press fork button  
-https://gyazo.com/04e45514f4a9cb64a32168a8a5f34cec  
+step1: このリポジトリを、ご自身のリポジトリにforkしてください
 
-step2: checkout your branch and run server  
+step2: ローカルにcloneし、作業用ブランチでrails sできるところまで進めてください
   
-`git checkout -b bugfix`  
+`git clone git@github.com:tadao050707/rails_exam01_bugfix.git`
+`git checkout -b bugfix`
 `bundle install`  
 `rails db:create`  
 `rails db:migrate`  
 `rails db:seed`  
 `rails server`  
 
-step3: push your commits and create PullRequest on Github
+step3: デバッグが完了したら、コミットし、ご自身のGitHubリポジトリにpushしてください
 
 # How to push commit to Github
-`git add -A`  
+`git add .`  
 `git commit -m "Fix: [write your message]"`  
 `git push origin bugfix`  
 
@@ -52,7 +51,7 @@ end
 `2.6.3`
 
 * Rails version  
-`2.5.3`
+`5.2.3`
 
 ---
 ### How to Install Ruby 2.6.3
