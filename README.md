@@ -7,8 +7,8 @@ step1: このリポジトリを、ご自身のリポジトリにforkしてくだ
 
 step2: ローカルにcloneし、作業用ブランチでrails sできるところまで進めてください
   
-`git clone git@github.com:tadao050707/rails_exam01_bugfix.git`
-`git checkout -b bugfix`
+`git clone git@github.com:tadao050707/rails_exam01_bugfix.git`  
+`git checkout -b bugfix`  
 `bundle install`  
 `rails db:create`  
 `rails db:migrate`  
