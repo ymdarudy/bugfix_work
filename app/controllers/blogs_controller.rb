@@ -16,7 +16,7 @@ class BlogsController < ApplicationController
   def create
     @blog = Blog.new(blog_params)
     if @blog.save
-      redirect_to @blog, notice: 'Blog was successfully created.'
+      redirect_to @blog, notice: "Blog was successfully created."
     else
       render :new
     end
@@ -24,7 +24,7 @@ class BlogsController < ApplicationController
 
   def update
     if @blog.update(blog_params)
-      redirect_to @blog, notice: 'Blog was successfully updated.'
+      redirect_to @blog, notice: "Blog was successfully updated."
     else
       render :edit
     end
@@ -32,7 +32,7 @@ class BlogsController < ApplicationController
 
   def destroy
     @blog.destroy
-    redirect_to blogs_url, notice: 'Blog was successfully destroyed.'
+    redirect_to blogs_url, notice: "Blog was successfully destroyed."
   end
 
   private
@@ -42,6 +42,8 @@ class BlogsController < ApplicationController
   end
 
   def blog_params
-    params.require(:blog).permit(:title)
+    # エラー原因: contentのデータが来てない
+    # 修正の意図: contentのデータ渡しを許可
+    params.require(:blog).permit(:title, :content)
   end
 end
