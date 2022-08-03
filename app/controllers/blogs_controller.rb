@@ -12,7 +12,6 @@ class BlogsController < ApplicationController
   end
 
   def edit
-    p @blog
   end
 
   def create
