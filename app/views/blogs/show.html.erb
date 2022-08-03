@@ -15,7 +15,10 @@
 
   <p>
     <strong>Comment:</strong>
-    <%= @blog.comments.count.to_i + "comments" %>
+    <%# エラー原因: 数字に文字列を足そうとした %>
+    <%# 修正の意図: 文字列に合わせる、または式展開を利用 %>
+    <%= @blog.comments.count.to_s + "comments" %>
+    <%#= "#{@blog.comments.count}comments" %>
   </p>
 
   <p>
